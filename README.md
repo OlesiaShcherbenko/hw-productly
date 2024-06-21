@@ -1,4 +1,4 @@
-# Homework title
+# Productly
 
 ## About
 Context: Export all images from Figma to the image folder. And then create a semantic html structure for the layout.
