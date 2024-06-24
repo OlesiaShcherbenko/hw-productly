@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --base-font-family: "Poppins", sans-serif;
-  --container-size: 1110px;
-  --text-color: #2f281e;
+  --c-text: #2f281e;
+  --c-accent: #ff9900;
+  --c-white: #fff;
+  --c-gray: #bcd0e5;
+  --c-dark-gray: #173A56;
 }
 
 /* 
@@ -22,7 +24,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #2f281e;
+  color: var(--c-text);
 }
 
 input,
@@ -47,22 +49,20 @@ image {
 /* BEM MODIFIER */
 
 .container {
-  display: flex;
-  align-items: center;
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* 
 HEADER 
 */
 
-/* BEM BLOCK */
 .header {
-  max-width: var(--container-size);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
-  margin: 20px 145px;
 }
 
 /* BEM BLOCK */
@@ -102,16 +102,16 @@ HEADER
 
 /* BEM ELEMENT of button */
 .button__primary {
-  background-color: #ff9900;
-  color: #fff;
+  background-color: var(--c-accent);
+  color: var(--c-white);
   border: none;
 }
 
 /* BEM ELEMENT of button */
 .button__secondary {
-  border: 1px solid #bcd0e5;
-  color: #173a56;
-  background-color: #fff;
+  border: 1px solid var(--c-gray);
+  color: var(--c-dark-gray);
+  background-color: var(--c-white);
   margin-right: 14px;
 }
 
@@ -121,35 +121,40 @@ MAIN
 
 /* BEM BLOCK */
 .hero {
-  display: flex;
-  align-items: center;
   margin: 30px 0 110px 0;
-  margin: 145px;
 }
 
-/* BEM ELEMENT of section "hero" */
-.hero__text {
-  max-width: 518px;
+.hero__content {
+  display: flex;
+  align-items: center;
+
+  column-gap: 30px;
 }
+
+/* BEM ELEMENT of section "hero"
+.hero__text {
+  width: 518px;
+} */
 
 /* BEM MODIFIER */
 .hero__text--title {
   font-size: 44px;
-  line-height: 1;
+  line-height: 1.2;
   margin-bottom: 30px;
 }
 
 /* BEM MODIFIER */
 .hero__text--description {
-  font-size: 18px;
   margin-bottom: 45px;
+  width: 518px;
+  line-height: 1.5;
 }
 
 /* BEM BLOCK */
 .link {
   display: flex;
   flex-direction: row;
-  color: #ff9900;
+  color: var(--c-accent);
 }
 
 .link img {
@@ -163,18 +168,29 @@ MAIN
   gap: 30px;
 }
 
+/* Why image doesn't shrink? */
+.illustration {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* BEM BLOCK */
 .container-for-serves {
   display: flex;
   align-items: center;
-  gap: 100px;
-  margin: 145px;
+  column-gap: 100px;
+}
+
+.designer,
+.marketers {
+  margin: 145px 0;
 }
 
 /* BEM BLOCK */
 .title {
   font-size: 32px;
-  color: #2f281e;
+  color: var(--c-text);
   font-weight: 700;
   margin-bottom: 22px;
 }
@@ -198,7 +214,7 @@ MAIN
 
 /* BEM ELEMENT of section "pros" */
 .pros__title {
-  color: #2f281e;
+  color: var(--c-text);
   margin-bottom: 12px;
 }
 
@@ -222,7 +238,6 @@ MAIN
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 145px;
 }
 
 /* BEM MODIFIER */
@@ -257,9 +272,9 @@ MAIN
 /* BEM BLOCK */
 .divider {
   height: 1px;
-  background-color: #bcd0e5;
-  max-width: 1109;
-  margin: 145px;
+  background-color: var(--c-gray);
+  max-width: 1110px;
+  margin: 100px;
 }
 
 /* 
@@ -271,7 +286,7 @@ FOOTER
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 100px 145px;
+  margin-bottom: 85px;
 }
 
 /* BEM BLOCK */
@@ -283,7 +298,7 @@ FOOTER
 .link--titel {
   font-size: 18px;
   font-weight: 600;
-  color: #2f281e;
+  color: var(--c-text);
 }
 
 /* BEM ELEMENT of nav */
@@ -311,5 +326,5 @@ FOOTER
 .form input {
   height: 48px;
   margin-bottom: 21px;
-  border: 1px solid #bcd0e5;
+  border: 1px solid var(--c-gray);
 }
