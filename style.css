@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --c-text: #2f281e;
+  --c-accent: #ff9900;
+  --c-white: #fff;
+  --c-gray: #bcd0e5;
+  --c-dark-gray: #173a56;
+}
+
+/* 
+CSS NORMALIZE 
+*/
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--c-text);
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* BEM BLOCK */
+/* BEM ELEMENT of ... */
+/* BEM MODIFIER */
+
+.container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 
+HEADER 
+*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* BEM BLOCK */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* BEM ELEMENT of img */
+.logo__img {
+  width: 30px;
+  height: auto;
+}
+
+/* BEM ELEMENT of nav */
+.navigation__list {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+/* BEM MODIFIER */
+.navigation__list--item a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* BEM BLOCK */
+.button {
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* BEM ELEMENT of button */
+.button__primary {
+  background-color: var(--c-accent);
+  color: var(--c-white);
+  border: none;
+}
+
+/* BEM ELEMENT of button */
+.button__secondary {
+  border: 1px solid var(--c-gray);
+  color: var(--c-dark-gray);
+  background-color: var(--c-white);
+  margin-right: 14px;
+}
+
+/* 
+MAIN 
+*/
+
+/* BEM BLOCK */
+.hero {
+  margin: 30px 0 110px 0;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+
+  column-gap: 30px;
+}
+
+/* BEM ELEMENT of section "hero"
+.hero__text {
+  width: 518px;
+} */
+
+/* BEM MODIFIER */
+.hero__text--title {
+  font-size: 44px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+/* BEM MODIFIER */
+.hero__text--description {
+  margin-bottom: 45px;
+  width: 518px;
+  line-height: 1.5;
+}
+
+/* BEM BLOCK */
+.link {
+  display: flex;
+  flex-direction: row;
+  color: var(--c-accent);
+}
+
+.link img {
+  margin-right: 3px;
+  width: 20px;
+}
+
+.button-set {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Why image doesn't shrink? */
+.illustration {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* BEM BLOCK */
+.container-for-serves {
+  display: flex;
+  align-items: center;
+  column-gap: 100px;
+}
+
+.designer,
+.marketers {
+  margin: 145px 0;
+}
+
+/* BEM BLOCK */
+.title {
+  font-size: 32px;
+  color: var(--c-text);
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+/* BEM BLOCK */
+.subtitle {
+  font-weight: 500;
+  color: #544837;
+}
+
+/* BEM BLOCK */
+.description {
+  color: #544837;
+  margin-bottom: 30px;
+}
+
+/* BEM BLOCK */
+.pros-list {
+  list-style: none;
+}
+
+/* BEM ELEMENT of section "pros" */
+.pros__title {
+  color: var(--c-text);
+  margin-bottom: 12px;
+}
+
+/* BEM ELEMENT of section "pros" */
+.pros__description {
+  margin-bottom: 25px;
+}
+
+/* BEM ELEMENT of section "pros" */
+.pros__item {
+  display: flex;
+  column-gap: 30px;
+}
+
+.pros__item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+/* BEM BLOCK */
+.serves {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.serves-background {
+  background-image: url(image/bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.serves-background__container {
+  padding-bottom: 75px;
+}
+
+/* BEM MODIFIER */
+.title--serves {
+  max-width: 539px;
+  text-align: center;
+  margin-bottom: 54px;
+}
+
+/* BEM BLOCK */
+.serves-list {
+  display: flex;
+  gap: 46px;
+  margin-bottom: 34px;
+  list-style: none;
+}
+
+/* BEM ELEMENT of section "pros" */
+.serves-list__item {
+  max-width: 240px;
+}
+
+.serves-list__item img {
+  margin-bottom: 30px;
+}
+
+.serves-list__item h3 {
+  margin-bottom: 14px;
+  font-size: 22px;
+}
+
+/* BEM BLOCK */
+.divider {
+  height: 1px;
+  background-color: var(--c-gray);
+  max-width: 1110px;
+  margin: 100px;
+}
+
+/* 
+FOOTER
+*/
+
+/* BEM BLOCK */
+.footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 85px;
+}
+
+/* BEM BLOCK */
+.nav-footer {
+  width: 130px;
+}
+
+/* BEM ELEMENT of nav */
+.link--titel {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+/* BEM ELEMENT of nav */
+.link--item {
+  display: flex;
+  text-decoration: none;
+  color: #544837;
+  line-height: 2;
+}
+
+/* BEM BLOCK */
+.form {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  width: 280px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 34px;
+}
+
+.form input {
+  height: 48px;
+  margin-bottom: 21px;
+  border: 1px solid var(--c-gray);
+  border-radius: 4px;
+  padding: 15px 10px;
+}
+
+.form .button {
+  width: 180px;
+}
